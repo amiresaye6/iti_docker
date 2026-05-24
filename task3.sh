@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -d --name app-database -e MYSQL_ROOT_PASSWORD="P4sSw0rd0!" mysql:latest

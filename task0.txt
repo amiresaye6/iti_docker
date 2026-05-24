@@ -1,0 +1,18 @@
+CMD vs. ENTRYPOINTCMD:
+This instruction provides defaults for executing a command inside a container.
+If you run a container and pass a command at the end (e.g., docker run my-image echo "hello"),
+it will easily overwrite the CMD instruction.
+
+ENTRYPOINT:
+This configures a container to run as an executable. It is much harder to override.
+If you have an ENTRYPOINT, anything you type after docker run gets passed as a parameter to that entrypoint,
+rather than replacing it.
+
+2. COPY vs. ADD
+
+COPY:
+Simply copies new local files or directories from your machine into the container.
+
+ADD: Does exactly what COPY does, but with two superpowers:
+it supports using a URL instead of a local file,
+and it can automatically extract a .tar archive file directly into the destination inside the container.
