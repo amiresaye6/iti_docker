@@ -1,0 +1,73 @@
+root@Amir:~# history
+    1  whoami
+    2  docker version
+    3  docker run hello-world
+    4  docker ps
+    5  docker images ls
+    6  docker images
+    7  clear
+    8  docker images
+    9  docker network ls
+   10  docker network amir-web-service
+   11  docker  network amir-web-service
+   12  docker  network create amir-web-service
+   13  docker network ls
+   14  docker run -itd --name c1 --network amir-web-service -p 1234:80 httpd
+   15  docker images
+   16  ps
+   17  docker ps
+   18  docker volume create n8n_data
+   19  docker run -it --rm  --name n8n  -p 5678:5678  -e GENERIC_TIMEZONE="<YOUR_TIMEZONE>"  -e TZ="<YOUR_TIMEZONE>"  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true  -e N8N_RUNNERS_ENABLED=true  -v n8n_data:/home/node/.n8n  docker.n8n.io/n8nio/n8n
+   20  docker volums ls
+   21  docker volumes ls
+   22  docker volumes
+   23  docker run -it --rm --name n8n -p 5678:5678 -v n8_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+   24  docker ps
+   25  docker run -d  --name my-nginx -v html-vol:/user/share/nginx/html -v conf-vol:/etc/nginx/conf.d nginx
+   26  docker ps
+   27  docker exec my-nginx sh -c 'echo "<h1>Hi, my name is amir alsayed, welcome to my docker volum data saving</h1>" > /usr/share/nginx/html/index.html'
+   28  docker inspect -f my-nginx
+   29  docker inspect my-nginx
+   30  docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-nginx
+   31  clera
+   32  clear
+   33  docker rm -f my-nginx
+   34  docker ps
+   35  docker run -d my-new-nginx-1 1234:80 -v html-vol:/usr/share/nginx/html -v conf-vol:/etc/nginx/conf.d nginx
+   36  docker run -d --name new-nginx-1 -p 8080:80 -v html-vol:/usr/share/nginx/html -v conf-vol:/etc/nginx/conf.d nginx
+   37  docker run -d --name new-nginx-2 -p 8081:80 -v html-vol:/usr/share/nginx/html -v conf-vol:/etc/nginx/conf.d nginx
+   38  docker ps
+   39  mkdir -p ~/nginx_html ~/nginx_conof
+   40  ls
+   41  docker run -d --name nginx-bind-mount -v ~/nginx_html:/usr/share/nginx/html -v ~/nginx_conof:/etc/nginx/conf.d nginx
+   42  docker ps
+   43  docker rm -f nginx-bind-mount
+   44  docker ps
+   45  echo "making new docker containwer with same old mounted director8ies 'aka volumes :__:'"
+   46  docker run -d --name new-bind-container -v ~/nginx_html:/usr/share/nginx/html -v ~/nginx_conof:/etc/nginx/conf.d nginx
+   47  docker ps
+   48  clear
+   49  docker network create bridge-net-1
+   50  docker network create bridge-net-2
+   51  docker network
+   52  docker network ls
+   53  docker run -d --name nginx-web-1 --network bridge-net-1 nginx
+   54  docker run -d --name nginx-web-2 --network bridge-net-2 nginx
+   55  docker ps
+   56  docker exec -it nginx-web-1 bash
+   57  clear
+   58  vim docker-compose.yml
+   59  cat docker-compose.yml
+   60  docker-compose up -d
+   61  docker ps
+   62  vim docker-compose.yml
+   63  docker-compose up -d
+   64  vim docker-compose.yml
+   65  clear
+   66  cat docker-compose.yml
+   67  docker-compose up -d
+   68  vim docker-compose.yml
+   69  docker-compose up -d
+   70  docker ps
+   71  history
+root@Amir:~#
